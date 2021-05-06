@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<!-- The goal of this website is to create a dynamic, fully responsive, standards compliant webpage, that iser asynchronus HTTP requests to query the V&A API -->
+
+<head>
+	<meta charset="utf-8">
+	<title>Victoria and Albert - Search the Collections</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="index.css" /> 
+	<script src="index.js"></script> 
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header section -->
+        <a id="top" class="header_banner"></a>
+        <div class="header_banner">
+            <!-- V&A image icon taken from V&A website -->
+            
+            <small>V and A Museum Image Icon and Collection, property of V and A</small>
+        </div>
+        
+        <!-- Search bar section -->
+        <div class="search_bar">
+            <form id="searchForm">
+                <input type="search" id="searchBar" name="searchBar">
+                <input type="submit" id="searchBarButton" name="searchBar" value="Search">
+                <!--element to display error message -->
+            </form>
+            <span id="hint_error"></span>
+        </div>
+        
+        <!-- Search results section -->
+            <div class="results_section"></div>
+        
+        <!-- Footer section -->
+        <footer class="footer">
+            <p class="footer" id="topOfPage"><a href="#top">Go to top</a></p>
+            <!-- The accessibility checker img icon comes from the achecker website, when I checked if the website was accessible -->
+            <p id="accessibility_checker">
+                <a href="https://achecker.ca/checker/index.php?uri=referer&gid=WCAG2-AA">
+                    <img src="images/icon_W2_aa.jpg" alt="WCAG 2.0 (Level AA)"/>
+                </a>
+            </p>
+            <small>&copy; Website, 2020, Jack Chinnery</small>
+        </footer>
+    </div>
+</body>
+
+</html>

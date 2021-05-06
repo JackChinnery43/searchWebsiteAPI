@@ -1,0 +1,167 @@
+/* Responsiveness */
+.wrapper {
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas: 
+        "banner"
+        "asside"
+        "main"
+        "footer";
+}
+
+@media (min-width: 50em) {
+    .wrapper {
+        grid-template-columns: 3fr 6fr;
+        grid-template-areas: 
+            "banner  banner"
+            "asside asside"
+            "main main"
+            "footer  footer";
+  }
+}
+
+ @media (min-width: 60em) {
+     .wrapper {
+         grid-template-columns: 2fr 8fr 2fr;
+         grid-template-areas: 
+            ".  banner  ."
+            ". asside ."
+            ". main  ."
+            ".  footer  .";
+   }
+}
+
+.container {
+    width: 992px;
+    margin: auto;
+    background-color: #ECECEC;
+}
+
+/* header section */
+
+.header_banner {
+    grid-area: banner;
+    background-color: white;
+    padding: 24px;
+    height: 80px;
+}
+.header_banner small {
+    display: block;
+    padding-top: 20px;
+}
+
+body {
+    background-color: #AC2B26;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* Search bar/input section */
+
+#searchForm {
+    padding-left: 4px;
+}
+.search_bar {
+    grid-area: asside;
+    padding: 24px;
+    display: inline-block;
+    background-color: #ECECEC;
+}
+
+#searchForm {
+    display: inline-block;
+}
+
+#searchBar {
+    height: 40px;
+    width: 300px;
+    border: 1px solid #AC2B26;
+    font-size: 15px;
+}
+
+#searchBarButton {
+    height: 40px;
+    width: 90px;
+    border: 2px solid #AC2B26;
+    background-color: #AC2B26;
+    color: white;
+    padding-left: 10px;
+}
+
+/* Responsiveness */
+#hint_error {
+    display: flex;
+    padding-top: 24px;
+    padding-left: 4px;
+}
+
+/* Responsiveness */
+
+.header_banner img {
+    height: 60px;
+    width: 304px;
+}
+
+.search_info {
+    grid-area: main;
+    color: black;
+    padding: 24px;
+}
+
+/* Results section, for the grid section, img and text divs */
+
+.results_section {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    vertical-align: top;
+    padding-left: 24px;
+    padding-right: 24px;
+    grid-area: main;
+    background-color: #ECECEC;
+    text-align: center;
+}
+
+.results_section img {
+    grid-gap: 15px;
+    height: 250px;
+    max-width: 270px;
+    width: 100%;
+    float: inherit;
+    padding-top: 24px;
+    align-items: center;
+}
+
+.results_section div {
+    flex: auto;
+    padding: inherit;
+    margin: 5px;
+    border: 2px solid #AC2B26;
+}
+
+/* Footer area */
+/* link to top of page, in order to make page more user friendly */
+#topOfPage{
+    text-align: right;
+    padding-right: 24px;
+}
+
+/* accessibility checker, provided by https://achecker.ca/checker/index.php after testing my websites acessibility */
+#accessibility_checker {
+    float: right;
+    margin: 0;
+    height: 32px;
+    width: 102;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ECECEC;
+}
+
+footer small {
+    padding: 24px;
+}
